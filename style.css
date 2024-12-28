@@ -1,0 +1,110 @@
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #000000;
+    --bg-color-dark: #121212;
+    --text-color-dark: #ffffff;
+    --category-bg: #f0f0f0;
+    --category-bg-dark: #333333;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--category-bg);
+    border-bottom: 2px solid #ddd;
+}
+
+header button {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    border-radius: 5px;
+}
+
+main {
+    padding: 1rem;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.category {
+    padding: 1rem;
+    background-color: var(--category-bg);
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.category:hover {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--category-bg);
+    border-top: 2px solid #ddd;
+}
+
+.dark-theme {
+    --bg-color-light: #121212;
+    --text-color-light: #ffffff;
+    --bg-color-dark: #f0f0f0;
+    --text-color-dark: #000000;
+    --category-bg: #333333;
+    --category-bg-dark: #f0f0f0;
+}
+
+.quiz-container {
+    text-align: center;
+}
+
+.question {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.options {
+    display: grid;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.option {
+    padding: 0.5rem;
+    border: 1px solid var(--text-color-light);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option:hover {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.stats {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
